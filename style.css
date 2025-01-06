@@ -1,3 +1,27 @@
+@font-face {
+  font-display: swap; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/Inter/inter-v18-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/Inter/inter-v18-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Norse';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/Norse/Norse-Bold.otf') format('opentype');
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
