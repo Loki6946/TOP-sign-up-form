@@ -22,6 +22,63 @@
   src: url('./assets/fonts/Norse/Norse-Bold.otf') format('opentype');
 }
 
+:root {
+  /* Colors */
+  --color-background-primary: hsl(0, 0%, 90%);
+  --color-background-secondary: hsl(0, 0%, 100%);
+
+  --color-foreground-primary: hsl(0, 0%, 0%);
+  --color-foreground-secondary: hsl(0, 0%, 100%);
+
+  --color-border-normal: hsl(220, 13%, 91%);
+  --color-border-focus: hsl(240, 78%, 65%);
+  --color-border-invalid: hsl(0, 78%, 50%);
+
+  --color-button-normal: hsl(92, 20%, 35%);
+  --color-button-hover: hsl(92, 20%, 40%);
+
+  --color-link-normal: hsl(92, 20%, 35%);
+
+  /* Typography */
+  --font-primary: 'Inter', 'sans-serif';
+  --font-secondary: 'Norse', "Times New Roman";
+
+  --font-primary-normal: 400;
+  --font-primary-bold: 700;
+  --font-secondary-bold: 700;
+
+  --text-base-size: 1rem;
+  --text-scale-ratio: 1.2;
+
+  --text-xs: calc(1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1rem / var(--text-scale-ratio));
+  --text-md: calc(1rem * var(--text-scale-ratio));
+  --text-lg: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  /* Spacing */
+  --space-unit: 1rem;
+  --space-xxs:  calc(0.25 * var(--space-unit));
+  --space-xs:   calc(0.5 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1.25 * var(--space-unit));
+  --space-lg:   calc(2 * var(--space-unit));
+  --space-xl:   calc(3.25 * var(--space-unit));
+  --space-xxl:  calc(5.25 * var(--space-unit));
+
+  /* Rounded corner */
+  --rounded-unit: 3px;
+  --rounded-xxs:  calc(0.25 * var(--rounded-unit));
+  --rounded-xs:   calc(0.5 * var(--rounded-unit));
+  --rounded-sm:   calc(0.75 * var(--rounded-unit));
+  --rounded-md:   calc(1.25 * var(--rounded-unit));
+  --rounded-lg:   calc(2 * var(--rounded-unit));
+  --rounded-xl:   calc(3.25 * var(--rounded-unit));
+  --rounded-xxl:  calc(5.25 * var(--rounded-unit));
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
