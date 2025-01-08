@@ -24,8 +24,9 @@
 
 :root {
   /* Colors */
-  --color-background-primary: hsl(0, 0%, 90%);
+  --color-background-primary: hsl(0, 0%, 98%);
   --color-background-secondary: hsl(0, 0%, 100%);
+  --color-background-tertiary: hsla(0, 0%, 0%, 0.548);
 
   --color-foreground-primary: hsl(0, 0%, 0%);
   --color-foreground-secondary: hsl(0, 0%, 100%);
@@ -48,7 +49,7 @@
   --font-secondary-bold: 700;
 
   --text-base-size: 1rem;
-  --text-scale-ratio: 1.2;
+  --text-scale-ratio: 1.3;
 
   --text-xs: calc(1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)));
   --text-sm: calc(1rem / var(--text-scale-ratio));
@@ -59,7 +60,7 @@
   --text-xxxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
   /* Spacing */
-  --space-unit: 1rem;
+  --space-unit: 2rem;
   --space-xxs:  calc(0.25 * var(--space-unit));
   --space-xs:   calc(0.5 * var(--space-unit));
   --space-sm:   calc(0.75 * var(--space-unit));
@@ -88,7 +89,8 @@
 }
 
 body {
-  line-height: 1.5;
+  font-family: var(--font-primary);
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 
   min-height: 100vh;
@@ -112,4 +114,150 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
+
+.image-container {
+  background-image: url(./assets/images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container__logo-container {
+  background-color: var(--color-background-tertiary);
+
+  position: relative;
+  top: var(--space-xxl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container__logo {
+  max-width: 18%;
+  height: auto;
+}
+
+.image-container__name {
+  color: var(--color-foreground-secondary);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-secondary-bold);
+  font-size: var(--text-xxxl);
+}
+
+.image-container__image-description {
+  color: var(--color-foreground-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-xxs);
+}
+
+.image-container__image-description a {
+  color: var(--color-foreground-secondary);
+}
+
+.image-container__image-description a:hover {
+  text-decoration: none;
+}
+
+.odin-form {
+  background-color: var(--color-background-primary);
+}
+
+.odin-form__heading-container {
+  padding: var(--space-xl) var(--space-md) var(--space-md);
+}
+
+.odin-form__heading {
+  max-width: 500px;
+  font-weight: var(--font-primary-bold);
+}
+
+.odin-form__input-container {
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-background-secondary);
+  box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.21);
+}
+
+.odin-form__sub-heading {
+  font-weight: var(--font-primary-bold);
+  margin-bottom: var(--space-xs);
+}
+
+.odin-form__input-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-xl);
+}
+
+.odin-form__create-account-container {
+  padding: var(--space-md);
+}
+
+.odin-form__input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.odin-form__input-group label {
+  font-size: var(--text-sm);
+}
+
+.odin-form__input-group input {
+  outline: none;
+  padding: 0.2rem 0.4rem;
+  border: 2px solid var(--color-border-normal);
+  border-radius: var(--rounded-md);
+}
+
+.odin-form__input-group input:focus {
+  border: 2px solid var(--color-border-focus);
+  box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.21);
+}
+
+.odin-form__input-group input:invalid  {
+  border: 2px solid var(--color-border-invalid);
+}
+
+.odin-form__submit-button {
+  border: none;
+  outline: none;
+  color: var(--color-foreground-secondary);
+  font-weight: var(--font-primary-bold);
+  padding: var(--space-xxs) var(--space-md);
+  margin-bottom: var(--space-xxs);
+  background-color: var(--color-button-normal);
+  border-radius: var(--rounded-lg);
+}
+
+.odin-form__submit-button:hover {
+  cursor: pointer;
+  background-color: var(--color-button-hover);
+}
+
+.odin-form__login {
+  font-size: var(--text-sm);
+}
+
+.odin-form__login > a {
+  color: var(--color-link-normal);
+  font-weight: var(--font-primary-bold);
+}
+
+.odin-form__login > a:hover {
+  text-decoration: none;
 }
